@@ -58,7 +58,7 @@ export const ChatContainer = () => {
     }
     firstMessageDivRefPrev.current = firstMessageDivRef.current;
     isLoading.current = true;
-    await fetch('http://localhost:3001/api/allMessages', {
+    await fetch('https://chat-backend-8qnf.onrender.com/api/allMessages', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json;charset=utf-8'
