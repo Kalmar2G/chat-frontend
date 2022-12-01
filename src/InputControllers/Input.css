@@ -1,0 +1,47 @@
+.InputContainer {
+    position: fixed;
+    top: 78%;
+    height: 70px;
+    width: inherit;
+    background: #d1f5ff;
+    border: 3px solid #cba3ff;
+    border-radius: 0 0 30px 30px;
+
+}
+
+.Form {
+    height: 100%;
+    display: flex;
+    width: 100%;
+    outline: none;
+    border: none;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.Input {
+    width: 85%;
+    height: 50%;
+    outline: none;
+    border: none;
+    margin-left: 25px;
+    border-radius: 10px;
+    padding-left: 15px;
+}
+
+.SubmitButton {
+    width: 10%;
+    height: 100%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 0 30px 0;
+    font-size: 30px;
+    background: #99ffee;
+    border-left: 3px solid #cba3ff;
+}
+
+.SubmitButton:hover {
+    background: #00ffd7;
+}
