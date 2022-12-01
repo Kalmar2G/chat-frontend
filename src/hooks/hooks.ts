@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 
 export const useWebSocket = (
 ) => useMemo(() => {
-  const socket = new WebSocket('ws://localhost:3001/api/liveMessages');
+  const socket = new WebSocket('ws://chat-backend-8qnf.onrender.com/api/liveMessages');
   socket.onclose = () => {
     socket.send(JSON.stringify({ event: 'disconnect' }));
   };
