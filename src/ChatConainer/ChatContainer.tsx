@@ -8,6 +8,7 @@ import { useWebSocket } from '../hooks';
 import { scrollToBottom } from '../utils';
 import './ChatContainer.css';
 import { IMessage } from '../types';
+import { Loader } from '../Loader';
 
 let firstRenderArrowDownDisable = true;
 const msgArr: IMessage[] = [];
@@ -135,9 +136,9 @@ export const ChatContainer = () => {
       className="ChatContainer"
       ref={chatContainerRef}
     >
-      <div className="MessagesContainer">
-        {messages
-          ?.map((msg, index) => {
+      {messages?.length ? (
+        <div className="MessagesContainer">
+          {messages.map((msg, index) => {
             const {
               id, color, isShowTime, username, date, text,
             } = msg;
@@ -159,7 +160,8 @@ export const ChatContainer = () => {
               />
             );
           })}
-      </div>
+        </div>
+      ) : (<Loader />)}
       <Input
         sendMessage={sendMessage}
         setInputValue={setInputValue}
